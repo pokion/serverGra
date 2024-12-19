@@ -1,6 +1,4 @@
-import { RowDataPacket } from "mysql2"
-
-declare interface UserExport extends RowDataPacket{
+declare interface UserExport{
     Id: string
     Name: string
 }
