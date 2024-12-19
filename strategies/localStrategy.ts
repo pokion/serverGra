@@ -17,7 +17,7 @@ passport.deserializeUser(async (id: string, done)=>{
 	}
 });
 
-module.exports = passport.use(new Strategy(async (username, password, done)=>{
+export default passport.use(new Strategy(async (username, password, done)=>{
 	try{
 		const user = await db.users.findByUsername(username);
 		if(!user || user.length < 1) throw new Error('User not found');
